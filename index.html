@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let bubbles = [], length = 36, i;
+    for (i = 0; i < length; i++) {
+        bubbles.push(Math.round(Math.random() * 100));
+        document.write('<br>' + "Bubble solution #" + i + " score: " + bubbles[i] + '<br>');
+    }
+    let max = Math.max.apply(null, bubbles);
+    document.write('<br>' + "Bubbles tests: " + length + '<br>');
+    document.write('<br>' + "Highest bubble score: " + max + '<br>');
+
+    let maxscores = [];
+    bubbles.forEach(function (value, index, bubbles) {
+        if (value === Math.max.apply(null, bubbles)) {
+            maxscores.push(index);
+        }
+    });
+    document.write('<br>' + "Solutions with highest score: " + maxscores + '<br>');
+</script>
+</body>
+</html>
+
+
+<!--let bubbles = [], i;-->
+<!--for (i = 0; i < 36; i++) {-->
+<!--bubbles.push(Math.round(Math.random() * 100));-->
+<!--console.log("Bubble solution #" + i + " score: " + bubbles[i]);-->
+<!--}-->
+<!--document.write('<br>' + bubbles);-->
+<!--console.log(bubbles);-->
